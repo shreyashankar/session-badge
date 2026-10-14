@@ -1,0 +1,9 @@
+{
+  "name": "session-badge",
+  "version": "0.1.0",
+  "description": "Gives each session a colored badge with an emoji and a short topic label, so many sessions can be told apart at a glance",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Shreya Shankar"
+  }
+}

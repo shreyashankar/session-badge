@@ -1,0 +1,5 @@
+{
+  "name": "session-badge",
+  "owner": { "name": "Shreya Shankar" },
+  "plugins": [{ "name": "session-badge", "source": "./" }]
+}
