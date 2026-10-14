@@ -1,30 +1,46 @@
 # session-badge
 
-A Claude Code mod that shows a badge above the prompt in each session. The badge says what the agent is working on and which folder the session is in, for example "This agent is fixing the hw2 session id in the evals folder." Each session gets its own color, so you can tell many sessions apart at a glance.
+session-badge is a Claude Code mod. The mod shows a badge above the prompt in each session.
 
-The badge also shows how long the session has run, how many prompts it has had, and how that count compares to your other sessions.
+The badge shows:
+
+- The task of the agent, for example "fixing the hw2 session id".
+- The folder of the session.
+- The run time of the session.
+- The number of prompts in the session.
+- A comparison of this number with the number of prompts in your other sessions.
+
+Each session has a different color. The color helps you identify each session.
 
 ## Install
 
-Type this at the Claude Code prompt in a terminal:
+1. Open Claude Code in a terminal.
+2. Type this command at the prompt:
 
-```
-/plugin install session-badge --marketplace shreyashankar/session-badge
-```
+   ```
+   /plugin install session-badge --marketplace shreyashankar/session-badge
+   ```
 
-Answer `y` to add the marketplace, then press Enter to pick the user scope.
+3. Type `y` to add the marketplace.
+4. Push Enter to select the user scope.
 
 ## Use
 
-The label updates after each turn. To set the label yourself:
+The mod updates the task label after each turn.
+
+To set the task label manually, type `/badge` and the task. Example:
 
 ```
 /badge writing the lesson 1 slides
 ```
 
-To go back to automatic labels, run `/badge auto`. To see the current label, run `/badge`.
+The mod does not change a label that you set manually.
 
-## What the mod reads
+To start the automatic labels again, type `/badge auto`.
 
-- To write the label, the mod sends your last 10 messages in the session to Claude Haiku.
-- To compare sessions, the mod counts the prompts in your saved transcripts under `~/.claude/projects` with a local `python3` script. Only the counts are kept.
+To show the current label, type `/badge`.
+
+## Data that the mod reads
+
+- The mod sends your last 10 messages in the session to Claude Haiku. Claude Haiku writes the task label.
+- The mod counts the prompts in your saved transcripts in `~/.claude/projects`. A local `python3` script does this count. The mod keeps only the counts.
