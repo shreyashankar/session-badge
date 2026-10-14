@@ -2,8 +2,6 @@
 
 session-badge is a Claude Code mod. The mod shows a badge above the prompt in each session.
 
-![The badge above the Claude Code prompt](docs/screenshot.png)
-
 The badge shows:
 
 - The task of the agent, for example "fixing the hw2 session id".
