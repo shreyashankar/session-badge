@@ -2,7 +2,11 @@
 
 session-badge is a Claude Code mod. The mod shows a badge above the prompt in each session.
 
-![The badge above the Claude Code prompt](docs/screenshot.png)
+<p align="center">
+  <img src="docs/screenshot.png" alt="An example badge above the Claude Code prompt" width="600">
+  <br>
+  <em>Example: the badge of a session in the lab-website folder.</em>
+</p>
 
 The badge shows:
 
